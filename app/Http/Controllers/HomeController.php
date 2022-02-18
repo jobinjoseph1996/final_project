@@ -30,7 +30,6 @@ class HomeController extends Controller
         $user_id = Auth::id();
         $user = UserMessages::where('user_id', '=', $user_id)->get();
         // $user = UserMessages::all();
-        // dd($user);
         return view('home',compact('user'));
     }
     /**
